@@ -38,7 +38,7 @@ const Navigation = () => {
             <img 
               src={logo} 
               alt="Ayook Eree Global Tours" 
-              className="h-12 md:h-16 object-contain"
+              className="h-10 md:h-14 w-auto object-contain"
             />
           </div>
 
