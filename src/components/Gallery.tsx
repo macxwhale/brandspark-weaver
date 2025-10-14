@@ -8,6 +8,9 @@ import maasai from "@/assets/gallery-maasai.jpg";
 import mice from "@/assets/gallery-mice.jpg";
 import egypt from "@/assets/gallery-egypt.jpg";
 import safariBaloon from "@/assets/gallery-safari-balloon.jpg";
+import singaporeCity from "@/assets/gallery-singapore-city.jpg";
+import specialEvent from "@/assets/gallery-special-event.jpg";
+import sunrise from "@/assets/gallery-sunrise.jpg";
 
 const Gallery = () => {
   const images = [
@@ -21,6 +24,9 @@ const Gallery = () => {
     { src: safariBaloon, alt: "Hot air balloon safari over zebra herds", span: "md:col-span-2" },
     { src: mice, alt: "Professional MICE and conference services", span: "md:col-span-1" },
     { src: air, alt: "Premium air travel services", span: "md:col-span-1" },
+    { src: singaporeCity, alt: "Singapore Marina Bay Sands cityscape", span: "md:col-span-2" },
+    { src: specialEvent, alt: "Romantic special event arrangements", span: "md:col-span-1" },
+    { src: sunrise, alt: "Breathtaking African sunrise", span: "md:col-span-1" },
   ];
 
   return (
