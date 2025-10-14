@@ -31,20 +31,26 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Mail className="w-5 h-5 text-secondary mt-0.5" />
-                <a href="mailto:info@ayookeree.com" className="text-primary-foreground/80 hover:text-secondary transition-colors">
-                  info@ayookeree.com
+                <a href="mailto:info@ayookglobal.com" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                  info@ayookglobal.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="w-5 h-5 text-secondary mt-0.5" />
-                <a href="tel:+254700000000" className="text-primary-foreground/80 hover:text-secondary transition-colors">
-                  +254 700 000 000
-                </a>
+                <div className="text-primary-foreground/80">
+                  <a href="tel:+254725853602" className="hover:text-secondary transition-colors block">
+                    +254 725 853 602
+                  </a>
+                  <a href="tel:+254725853671" className="hover:text-secondary transition-colors block">
+                    +254 725 853 671
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 text-secondary mt-0.5" />
                 <span className="text-primary-foreground/80">
-                  Nairobi, Kenya
+                  International Life House,<br />
+                  Mama Ngina Street
                 </span>
               </li>
             </ul>
@@ -57,14 +63,11 @@ const Footer = () => {
             © {new Date().getFullYear()} Ayook Eree Global Tours Ltd. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors">
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors">
+            <a href="https://www.instagram.com/ayook_globaltours?igsh=MXZnZ3JtemwyMjI1dg==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors">
-              <Twitter className="w-5 h-5" />
+            <a href="https://wa.me/254725853602" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors">
+              <Phone className="w-5 h-5" />
             </a>
           </div>
         </div>

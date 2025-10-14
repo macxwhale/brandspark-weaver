@@ -10,15 +10,11 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">About Us</h2>
             <p className="text-lg text-foreground leading-relaxed">
               Welcome to <span className="font-semibold text-secondary">Ayook Eree Global Tours</span>, 
-              where every journey is a story waiting to be told. We're passionate about connecting travelers 
-              with the world's diverse cultures, from vibrant festivals and local cuisines to authentic community 
-              experiences. Our services go beyond cultural adventures. We also specialize in air travel, MICE 
-              arrangements, safari experiences, special event trips, travel insurance and many more, all tailored 
-              to make your travel smooth and unforgettable.
-            </p>
-            <p className="text-lg text-foreground leading-relaxed mt-4">
-              At Ayook Eree Global Tours, we don't just plan trips — we create experiences that inspire, connect, 
-              and last a lifetime.
+              where every journey becomes a unique story. We specialize in immersive cultural experiences, 
+              connecting travelers with diverse traditions, festivals, and authentic local life. Beyond cultural 
+              tours, we offer comprehensive services including air travel, MICE coordination, safaris, special 
+              events, and travel insurance, all tailored for a seamless and memorable trip. At Ayook Eree Global 
+              Tours, we craft experiences that inspire, connect, and endure.
             </p>
           </div>
 
