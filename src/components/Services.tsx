@@ -1,35 +1,40 @@
-import { Plane, Palmtree, Users, Calendar, Shield, MapPin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import airServices from "@/assets/gallery-air.jpg";
+import safariExperience from "@/assets/gallery-safari-balloon.jpg";
+import honeymoon from "@/assets/gallery-honeymoon.jpg";
+import maasai from "@/assets/gallery-maasai.jpg";
+import mice from "@/assets/gallery-mice.jpg";
+import specialEvent from "@/assets/gallery-special-event.jpg";
 
 const Services = () => {
   const services = [
     {
-      icon: Plane,
+      image: airServices,
       title: "Air Travel",
       description: "Seamless flight bookings and ticketing services for domestic and international destinations.",
     },
     {
-      icon: Palmtree,
+      image: safariExperience,
       title: "Safari Experience",
       description: "Witness the Great Migration, Big Five encounters, and authentic wildlife adventures.",
     },
     {
-      icon: MapPin,
-      title: "Leisure Travel",
-      description: "Curated vacation packages to exotic beaches, cultural sites, and scenic landscapes.",
+      image: honeymoon,
+      title: "Honeymoon Packages",
+      description: "Romantic getaways to paradise destinations, creating unforgettable moments for couples.",
     },
     {
-      icon: Users,
-      title: "Family Travel",
-      description: "Family-friendly itineraries designed for all ages with safety and comfort in mind.",
+      image: maasai,
+      title: "Cultural Experiences",
+      description: "Immerse yourself in authentic local cultures and traditions across Africa and beyond.",
     },
     {
-      icon: Calendar,
+      image: mice,
       title: "MICE Travel",
       description: "Professional event planning for meetings, incentives, conferences, and exhibitions.",
     },
     {
-      icon: Shield,
+      image: specialEvent,
       title: "Special Events",
       description: "Exclusive packages for weddings, anniversaries, and milestone celebrations abroad.",
     },
@@ -49,16 +54,21 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={service.title}
-              className="hover-lift border-none shadow-md group animate-fade-in-up"
+              className="hover-lift border-none shadow-md group animate-fade-in-up overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader>
-                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-secondary to-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-7 h-7 text-white" />
-                </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <CardTitle className="absolute bottom-4 left-4 text-2xl text-white">
+                  {service.title}
+                </CardTitle>
+              </div>
+              <CardContent className="p-6">
                 <CardDescription className="text-base">
                   {service.description}
                 </CardDescription>
