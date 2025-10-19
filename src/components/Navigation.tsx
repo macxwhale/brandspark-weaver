@@ -1,9 +1,17 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "@/assets/logo.jpg";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -19,8 +27,14 @@ const Navigation = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Destinations", href: "#destinations" },
     { name: "Contact", href: "#contact" },
+  ];
+
+  const destinations = [
+    { name: "East Africa", path: "/destinations/east-africa" },
+    { name: "Southern Africa", path: "/destinations/southern-africa" },
+    { name: "North Africa", path: "/destinations/north-africa" },
+    { name: "Europe & Asia", path: "/destinations/europe-asia" },
   ];
 
   return (
@@ -57,6 +71,27 @@ const Navigation = () => {
                 {link.name}
               </a>
             ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger className={`font-medium transition-colors flex items-center gap-1 ${
+                isScrolled 
+                  ? "text-foreground hover:text-secondary" 
+                  : "text-white hover:text-secondary"
+              }`}>
+                Destinations
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border-border">
+                {destinations.map((destination) => (
+                  <DropdownMenuItem 
+                    key={destination.name}
+                    onClick={() => navigate(destination.path)}
+                    className="cursor-pointer"
+                  >
+                    {destination.name}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button variant={isScrolled ? "hero" : "secondary"} size="sm">
               Get a Quote
             </Button>
@@ -88,6 +123,21 @@ const Navigation = () => {
                 {link.name}
               </a>
             ))}
+            <div className="px-4 py-2">
+              <div className="font-medium text-foreground mb-2">Destinations</div>
+              {destinations.map((destination) => (
+                <div
+                  key={destination.name}
+                  onClick={() => {
+                    navigate(destination.path);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="block px-4 py-2 text-muted-foreground hover:bg-muted transition-colors cursor-pointer"
+                >
+                  {destination.name}
+                </div>
+              ))}
+            </div>
             <div className="px-4 mt-2">
               <Button variant="hero" size="sm" className="w-full">
                 Get a Quote
