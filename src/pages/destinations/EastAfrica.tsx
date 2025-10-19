@@ -6,6 +6,8 @@ import safariImage from "@/assets/gallery-safari.jpg";
 import cheetahImage from "@/assets/gallery-cheetah.jpg";
 import maasaiImage from "@/assets/gallery-maasai.jpg";
 import balloonImage from "@/assets/gallery-safari-balloon.jpg";
+import PageHero from "@/components/PageHero";
+import eastAfricaHero from "@/assets/east-africa.jpg";
 
 const EastAfrica = () => {
   const destinations = [
@@ -34,20 +36,13 @@ const EastAfrica = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-32">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-b from-primary/10 to-background py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Explore East Africa with Us
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                East Africa is a region of breathtaking landscapes, diverse cultures, and unforgettable wildlife encounters. From the endless savannahs of Kenya to the misty mountains of Rwanda, every destination tells its own story.
-              </p>
-            </div>
-          </div>
-        </section>
+      <main className="pt-0">
+        <PageHero
+          title="Explore East Africa with Us"
+          subtitle="East Africa is a region of breathtaking landscapes, diverse cultures, and unforgettable wildlife encounters. From the endless savannahs of Kenya to the misty mountains of Rwanda, every destination tells its own story."
+          image={eastAfricaHero}
+          eyebrow="East Africa"
+        />
 
         {/* Destinations Grid */}
         <section className="py-16 bg-background">

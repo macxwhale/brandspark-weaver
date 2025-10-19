@@ -5,6 +5,8 @@ import { MapPin } from "lucide-react";
 import cheetahImage from "@/assets/gallery-cheetah.jpg";
 import safariImage from "@/assets/gallery-safari.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
+import PageHero from "@/components/PageHero";
+import southAfricaHero from "@/assets/south-africa.jpg";
 
 const SouthernAfrica = () => {
   const southAfrica = [
@@ -41,19 +43,13 @@ const SouthernAfrica = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-32">
-        <section className="bg-gradient-to-b from-primary/10 to-background py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Southern Africa
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                From the golden beaches and mountain peaks of South Africa to the untouched wilderness of Botswana and the wonders of Zimbabwe.
-              </p>
-            </div>
-          </div>
-        </section>
+      <main className="pt-0">
+        <PageHero
+          title="Southern Africa"
+          subtitle="From the golden beaches and mountain peaks of South Africa to the untouched wilderness of Botswana and the wonders of Zimbabwe."
+          image={southAfricaHero}
+          eyebrow="Southern Africa"
+        />
 
         {/* South Africa Section */}
         <section className="py-16 bg-background">

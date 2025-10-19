@@ -6,6 +6,8 @@ import santoriniImage from "@/assets/gallery-santorini.jpg";
 import singaporeImage from "@/assets/gallery-singapore.jpg";
 import singaporeCityImage from "@/assets/gallery-singapore-city.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
+import PageHero from "@/components/PageHero";
+import europeAsiaHero from "@/assets/europe-asia.jpg";
 
 const EuropeAsia = () => {
   const europeDestinations = [
@@ -78,19 +80,13 @@ const EuropeAsia = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-32">
-        <section className="bg-gradient-to-b from-primary/10 to-background py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Europe & Asia – Timeless Beauty and Endless Discovery
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                From Europe's charming cities and historic landmarks to Asia's tropical escapes and rich traditions, each destination invites you to explore a perfect mix of culture, excitement, and tranquility.
-              </p>
-            </div>
-          </div>
-        </section>
+      <main className="pt-0">
+        <PageHero
+          title="Europe & Asia – Timeless Beauty and Endless Discovery"
+          subtitle="From Europe's charming cities and historic landmarks to Asia's tropical escapes and rich traditions, each destination invites you to explore a perfect mix of culture, excitement, and tranquility."
+          image={europeAsiaHero}
+          eyebrow="Europe & Asia"
+        />
 
         {/* Europe Section */}
         <section className="py-16 bg-background">

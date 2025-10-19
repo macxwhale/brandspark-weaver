@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
 import egyptImage from "@/assets/gallery-egypt.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
+import PageHero from "@/components/PageHero";
+import northAfricaHero from "@/assets/north-africa.jpg";
 
 const NorthAfrica = () => {
   const destinations = [
@@ -22,19 +24,13 @@ const NorthAfrica = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-32">
-        <section className="bg-gradient-to-b from-primary/10 to-background py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                North Africa – Where History Meets Magic
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                A land steeped in history, vibrant culture, and breathtaking scenery. Whether it's the iconic monuments of Egypt or the lively markets of Morocco, exploring this region feels like walking through the pages of a living legend.
-              </p>
-            </div>
-          </div>
-        </section>
+      <main className="pt-0">
+        <PageHero
+          title="North Africa – Where History Meets Magic"
+          subtitle="A land steeped in history, vibrant culture, and breathtaking scenery. Whether it's the iconic monuments of Egypt or the lively markets of Morocco, exploring this region feels like walking through the pages of a living legend."
+          image={northAfricaHero}
+          eyebrow="North Africa"
+        />
 
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
