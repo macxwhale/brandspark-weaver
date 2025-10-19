@@ -1,32 +1,39 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { MapPin, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import eastAfrica from "@/assets/east-africa.jpg";
 import southAfrica from "@/assets/south-africa.jpg";
 import northAfrica from "@/assets/north-africa.jpg";
 import europeAsia from "@/assets/europe-asia.jpg";
 
 const DestinationsExpanded = () => {
+  const navigate = useNavigate();
+
   const destinationRegions = [
     {
       region: "East Africa",
       image: eastAfrica,
       description: "Discover the wild heart of Africa with safaris, pristine beaches, and rich cultures.",
+      path: "/destinations/east-africa",
     },
     {
       region: "Southern Africa",
       image: southAfrica,
       description: "From Table Mountain to Victoria Falls, explore diverse landscapes and wildlife.",
+      path: "/destinations/southern-africa",
     },
     {
       region: "North Africa",
       image: northAfrica,
       description: "Ancient wonders, Sahara adventures, and Mediterranean coastlines await.",
+      path: "/destinations/north-africa",
     },
     {
       region: "Europe & Asia",
       image: europeAsia,
       description: "Iconic cities, romantic islands, and exotic cultures across two continents.",
+      path: "/destinations/europe-asia",
     },
   ];
 
@@ -42,14 +49,15 @@ const DestinationsExpanded = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {destinationRegions.map((destination, index) => (
             <Card 
               key={destination.region}
+              onClick={() => navigate(destination.path)}
               className="group border-none shadow-lg hover-lift animate-fade-in overflow-hidden cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-72 overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
                 <img 
                   src={destination.image} 
                   alt={destination.region}
@@ -58,7 +66,7 @@ const DestinationsExpanded = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
-                    Destination: {destination.region}
+                    {destination.region}
                     <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                   </h3>
                   <p className="text-sm text-white/90">
