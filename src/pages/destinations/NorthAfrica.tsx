@@ -5,6 +5,7 @@ import { MapPin } from "lucide-react";
 import egyptImage from "@/assets/gallery-egypt.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
 import morocco2Image from "@/assets/morocco-2.jpg";
+import morocco3Image from "@/assets/morocco-3.jpg";
 import PageHero from "@/components/PageHero";
 import northAfricaHero from "@/assets/north-africa.jpg";
 import DestinationCarousel from "@/components/DestinationCarousel";
@@ -21,7 +22,7 @@ const NorthAfrica = () => {
   const moroccoDestination = {
     country: "Morocco – The Gateway to Africa",
     description: "With its blend of Arabic, Berber, and European influences, Morocco is a feast for the senses. Wander through the maze-like Medinas of Marrakech and Fes, experience the golden dunes of the Sahara Desert, and relax in the coastal beauty of Casablanca.",
-    images: [sunriseImage, morocco2Image],
+    images: [sunriseImage, morocco2Image, morocco3Image],
   };
 
   return (

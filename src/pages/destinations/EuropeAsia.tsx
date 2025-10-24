@@ -6,6 +6,7 @@ import santoriniImage from "@/assets/gallery-santorini.jpg";
 import singaporeImage from "@/assets/gallery-singapore.jpg";
 import singaporeCityImage from "@/assets/gallery-singapore-city.jpg";
 import singapore2Image from "@/assets/singapore-2.jpg";
+import singapore3Image from "@/assets/singapore-3.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
 import parisImage from "@/assets/paris.jpg";
 import turkeyImage from "@/assets/turkey.jpg";
@@ -15,6 +16,7 @@ import malaysia2Image from "@/assets/malaysia-2.jpg";
 import maldivesImage from "@/assets/maldives.jpg";
 import mauritiusImage from "@/assets/mauritius.jpg";
 import seychellesImage from "@/assets/seychelles.jpg";
+import vietnamImage from "@/assets/vietnam.jpg";
 import PageHero from "@/components/PageHero";
 import europeAsiaHero from "@/assets/europe-asia.jpg";
 import DestinationCarousel from "@/components/DestinationCarousel";
@@ -46,7 +48,7 @@ const EuropeAsia = () => {
   const singaporeDestination = {
     destination: "Singapore – The City in a Garden",
     description: "A modern marvel filled with lush greenery, Singapore offers world-class attractions like Marina Bay Sands, Gardens by the Bay, and vibrant cultural districts. It's clean, safe, and full of charm.",
-    images: [singaporeCityImage, singapore2Image],
+    images: [singaporeCityImage, singapore2Image, singapore3Image],
   };
 
   const malaysiaDestination = {
@@ -74,7 +76,7 @@ const EuropeAsia = () => {
     {
       destination: "Vietnam – Land of Timeless Treasures",
       description: "Discover Vietnam's charm through its dramatic landscapes, vibrant cities, and rich culture. Cruise along Ha Long Bay, explore Hanoi's Old Quarter, or savor street food in Ho Chi Minh City.",
-      image: sunriseImage,
+      image: vietnamImage,
     },
   ];
 
