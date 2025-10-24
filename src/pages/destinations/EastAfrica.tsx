@@ -9,17 +9,19 @@ import balloonImage from "@/assets/gallery-safari-balloon.jpg";
 import kigaliImage from "@/assets/kigali.jpg";
 import ugandaImage from "@/assets/uganda.jpg";
 import tanzaniaImage from "@/assets/tanzania.jpg";
+import victoriaFalls2Image from "@/assets/victoria-falls-2.jpg";
 import PageHero from "@/components/PageHero";
 import eastAfricaHero from "@/assets/east-africa.jpg";
 import DestinationCarousel from "@/components/DestinationCarousel";
 
 const EastAfrica = () => {
+  const kenyaDestination = {
+    title: "Kenya – The Heart of Safari",
+    description: "Experience the thrill of African wildlife in its natural habitat. Kenya offers unmatched safari adventures, From the world-famous Maasai Mara and its Great Migration to the serene shores of Lake Naivasha and the stunning views of Mount Kilimanjaro from Amboseli National Park.",
+    images: [safariImage, victoriaFalls2Image],
+  };
+
   const destinations = [
-    {
-      country: "Kenya – The Heart of Safari",
-      description: "Experience the thrill of African wildlife in its natural habitat. Kenya offers unmatched safari adventures, From the world-famous Maasai Mara and its Great Migration to the serene shores of Lake Naivasha and the stunning views of Mount Kilimanjaro from Amboseli National Park.",
-      image: safariImage,
-    },
     {
       country: "Rwanda – The Land of a Thousand Hills",
       description: "Rwanda is a gem of natural beauty and resilience. Explore the lush rainforests of Volcanoes National Park for a once-in-a-lifetime gorilla trekking experience, or enjoy the tranquility of Lake Kivu and the charm of Kigali city.",
@@ -54,6 +56,14 @@ const EastAfrica = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div className="animate-fade-in" style={{ animationDelay: "0s" }}>
+                <DestinationCarousel 
+                  title={kenyaDestination.title}
+                  description={kenyaDestination.description}
+                  images={kenyaDestination.images}
+                />
+              </div>
+
               {destinations.map((destination, index) => (
                 <Card 
                   key={destination.country}
