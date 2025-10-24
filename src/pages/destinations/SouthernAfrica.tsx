@@ -6,6 +6,8 @@ import cheetahImage from "@/assets/gallery-cheetah.jpg";
 import safariImage from "@/assets/gallery-safari.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
 import capetownImage from "@/assets/capetown.jpg";
+import capetown2Image from "@/assets/capetown-2.jpg";
+import durbanImage from "@/assets/durban.jpg";
 import victoriaFallsImage from "@/assets/victoria-falls.jpg";
 import okavangoDeltaImage from "@/assets/okavango-delta.jpg";
 import PageHero from "@/components/PageHero";
@@ -13,21 +15,23 @@ import southAfricaHero from "@/assets/south-africa.jpg";
 import DestinationCarousel from "@/components/DestinationCarousel";
 
 const SouthernAfrica = () => {
+  const capeTownDestination = {
+    title: "Cape Town – The Mother City",
+    description: "Famous for its stunning Table Mountain, Cape Town is where nature and culture meet. Explore the Cape Winelands, take a scenic drive along Chapman's Peak, or visit the historic Robben Island.",
+    images: [capetownImage, capetown2Image],
+  };
+
+  const durbanDestination = {
+    title: "Durban – The Coastal Gem",
+    description: "With its warm Indian Ocean waters and lively beachfront, Durban blends African, Indian, and colonial influences beautifully. Enjoy its golden beaches, visit uShaka Marine World, or savor the city's famous spicy cuisine.",
+    images: [cheetahImage, durbanImage],
+  };
+
   const southAfrica = [
-    {
-      city: "Cape Town – The Mother City",
-      description: "Famous for its stunning Table Mountain, Cape Town is where nature and culture meet. Explore the Cape Winelands, take a scenic drive along Chapman's Peak, or visit the historic Robben Island.",
-      image: capetownImage,
-    },
     {
       city: "Johannesburg – The City of Gold",
       description: "South Africa's largest city is a bustling hub of business, art, and history. Visit the Apartheid Museum, explore Soweto, and experience Johannesburg's dynamic nightlife and culinary scene.",
       image: safariImage,
-    },
-    {
-      city: "Durban – The Coastal Gem",
-      description: "With its warm Indian Ocean waters and lively beachfront, Durban blends African, Indian, and colonial influences beautifully. Enjoy its golden beaches, visit uShaka Marine World, or savor the city's famous spicy cuisine.",
-      image: cheetahImage,
     },
   ];
 
@@ -62,11 +66,19 @@ const SouthernAfrica = () => {
               A land of vibrant cities, diverse cultures, and breathtaking natural beauty. Explore golden beaches, mountain peaks, and wildlife reserves.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+              <div className="animate-fade-in" style={{ animationDelay: "0s" }}>
+                <DestinationCarousel 
+                  title={capeTownDestination.title}
+                  description={capeTownDestination.description}
+                  images={capeTownDestination.images}
+                />
+              </div>
+
               {southAfrica.map((destination, index) => (
                 <Card 
                   key={destination.city}
                   className="group border-none shadow-lg hover-lift animate-fade-in overflow-hidden"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  style={{ animationDelay: `${(index + 1) * 0.1}s` }}
                 >
                   <div className="relative h-80 overflow-hidden">
                     <img 
@@ -87,6 +99,14 @@ const SouthernAfrica = () => {
                   </div>
                 </Card>
               ))}
+
+              <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                <DestinationCarousel 
+                  title={durbanDestination.title}
+                  description={durbanDestination.description}
+                  images={durbanDestination.images}
+                />
+              </div>
             </div>
 
             {/* Other Destinations */}
