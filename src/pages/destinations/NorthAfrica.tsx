@@ -4,8 +4,10 @@ import { Card } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
 import egyptImage from "@/assets/gallery-egypt.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
+import morocco2Image from "@/assets/morocco-2.jpg";
 import PageHero from "@/components/PageHero";
 import northAfricaHero from "@/assets/north-africa.jpg";
+import DestinationCarousel from "@/components/DestinationCarousel";
 
 const NorthAfrica = () => {
   const destinations = [
@@ -14,12 +16,13 @@ const NorthAfrica = () => {
       description: "Stand in awe of the Great Pyramids of Giza, cruise along the River Nile, and explore ancient temples in Luxor and Aswan. Beyond its history, Egypt also offers the serene beaches of the Red Sea and vibrant city life in Cairo.",
       image: egyptImage,
     },
-    {
-      country: "Morocco – The Gateway to Africa",
-      description: "With its blend of Arabic, Berber, and European influences, Morocco is a feast for the senses. Wander through the maze-like Medinas of Marrakech and Fes, experience the golden dunes of the Sahara Desert, and relax in the coastal beauty of Casablanca.",
-      image: sunriseImage,
-    },
   ];
+
+  const moroccoDestination = {
+    country: "Morocco – The Gateway to Africa",
+    description: "With its blend of Arabic, Berber, and European influences, Morocco is a feast for the senses. Wander through the maze-like Medinas of Marrakech and Fes, experience the golden dunes of the Sahara Desert, and relax in the coastal beauty of Casablanca.",
+    images: [sunriseImage, morocco2Image],
+  };
 
   return (
     <div className="min-h-screen">
@@ -60,6 +63,12 @@ const NorthAfrica = () => {
                   </div>
                 </Card>
               ))}
+              
+              <DestinationCarousel 
+                title={moroccoDestination.country}
+                description={moroccoDestination.description}
+                images={moroccoDestination.images}
+              />
             </div>
           </div>
         </section>

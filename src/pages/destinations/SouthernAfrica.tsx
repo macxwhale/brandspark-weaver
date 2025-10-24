@@ -5,6 +5,7 @@ import { MapPin } from "lucide-react";
 import cheetahImage from "@/assets/gallery-cheetah.jpg";
 import safariImage from "@/assets/gallery-safari.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
+import capetownImage from "@/assets/capetown.jpg";
 import PageHero from "@/components/PageHero";
 import southAfricaHero from "@/assets/south-africa.jpg";
 
@@ -13,7 +14,7 @@ const SouthernAfrica = () => {
     {
       city: "Cape Town – The Mother City",
       description: "Famous for its stunning Table Mountain, Cape Town is where nature and culture meet. Explore the Cape Winelands, take a scenic drive along Chapman's Peak, or visit the historic Robben Island.",
-      image: sunriseImage,
+      image: capetownImage,
     },
     {
       city: "Johannesburg – The City of Gold",

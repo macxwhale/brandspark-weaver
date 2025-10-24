@@ -6,6 +6,7 @@ import safariImage from "@/assets/gallery-safari.jpg";
 import cheetahImage from "@/assets/gallery-cheetah.jpg";
 import maasaiImage from "@/assets/gallery-maasai.jpg";
 import balloonImage from "@/assets/gallery-safari-balloon.jpg";
+import kigaliImage from "@/assets/kigali.jpg";
 import PageHero from "@/components/PageHero";
 import eastAfricaHero from "@/assets/east-africa.jpg";
 
@@ -29,7 +30,7 @@ const EastAfrica = () => {
     {
       country: "Rwanda – The Land of a Thousand Hills",
       description: "Rwanda is a gem of natural beauty and resilience. Explore the lush rainforests of Volcanoes National Park for a once-in-a-lifetime gorilla trekking experience, or enjoy the tranquility of Lake Kivu and the charm of Kigali city.",
-      image: maasaiImage,
+      image: kigaliImage,
     },
   ];
 
