@@ -61,12 +61,12 @@ const EuropeAsia = () => {
     {
       destination: "Phuket, Thailand – A Tropical Gem",
       description: "Famous for its stunning beaches, turquoise waters, and vibrant nightlife, Phuket is the ultimate island getaway. Unwind by the sea, visit nearby islands, or discover the island's rich culture and bustling markets.",
-      image: sunriseImage,
+      image: singaporeImage,
     },
     {
       destination: "Bali, Indonesia – A Paradise of Culture and Calm",
       description: "Bali enchants with its emerald rice fields, sacred temples, and tranquil shores. Whether you're surfing, unwinding at a spa, or joining a yoga retreat, the island offers a perfect mix of relaxation, adventure, and spiritual charm.",
-      image: sunriseImage,
+      image: singapore2Image,
     },
     {
       destination: "Maldives – Heaven on Earth",

@@ -39,13 +39,13 @@ const SouthernAfrica = () => {
   const botswanaDestination = {
     title: "Botswana – The Jewel of the Kalahari",
     description: "Botswana is a land of untouched wilderness, spectacular wildlife, and breathtaking natural beauty. Explore the Okavango Delta, a UNESCO World Heritage Site, and Chobe National Park, home to one of the largest elephant populations in Africa.",
-    images: [sunriseImage, okavangoDeltaImage, okavangoDelta2Image],
+    images: [okavangoDeltaImage, okavangoDelta2Image],
   };
 
   const zimbabweDestination = {
     title: "Zimbabwe – The Land of Wonders",
     description: "Zimbabwe is home to Victoria Falls, one of the Seven Natural Wonders of the World. Explore wildlife-rich Hwange National Park, discover ancient history at the Great Zimbabwe Ruins, and cruise along the Zambezi River at sunset.",
-    images: [cheetahImage, victoriaFallsImage],
+    images: [victoriaFallsImage],
   };
 
   return (
