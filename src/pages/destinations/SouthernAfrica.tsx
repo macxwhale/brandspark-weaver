@@ -10,6 +10,7 @@ import capetown2Image from "@/assets/capetown-2.jpg";
 import durbanImage from "@/assets/durban.jpg";
 import victoriaFallsImage from "@/assets/victoria-falls.jpg";
 import okavangoDeltaImage from "@/assets/okavango-delta.jpg";
+import okavangoDelta2Image from "@/assets/okavango-delta-2.jpg";
 import PageHero from "@/components/PageHero";
 import southAfricaHero from "@/assets/south-africa.jpg";
 import DestinationCarousel from "@/components/DestinationCarousel";
@@ -38,7 +39,7 @@ const SouthernAfrica = () => {
   const botswanaDestination = {
     title: "Botswana – The Jewel of the Kalahari",
     description: "Botswana is a land of untouched wilderness, spectacular wildlife, and breathtaking natural beauty. Explore the Okavango Delta, a UNESCO World Heritage Site, and Chobe National Park, home to one of the largest elephant populations in Africa.",
-    images: [sunriseImage, okavangoDeltaImage],
+    images: [sunriseImage, okavangoDeltaImage, okavangoDelta2Image],
   };
 
   const zimbabweDestination = {
