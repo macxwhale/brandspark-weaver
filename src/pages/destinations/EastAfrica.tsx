@@ -7,8 +7,11 @@ import cheetahImage from "@/assets/gallery-cheetah.jpg";
 import maasaiImage from "@/assets/gallery-maasai.jpg";
 import balloonImage from "@/assets/gallery-safari-balloon.jpg";
 import kigaliImage from "@/assets/kigali.jpg";
+import ugandaImage from "@/assets/uganda.jpg";
+import tanzaniaImage from "@/assets/tanzania.jpg";
 import PageHero from "@/components/PageHero";
 import eastAfricaHero from "@/assets/east-africa.jpg";
+import DestinationCarousel from "@/components/DestinationCarousel";
 
 const EastAfrica = () => {
   const destinations = [
@@ -18,21 +21,23 @@ const EastAfrica = () => {
       image: safariImage,
     },
     {
-      country: "Tanzania – Where Adventure Meets Serenity",
-      description: "Home to the majestic Serengeti, Tanzania is every traveler's dream, the breathtaking Ngorongoro Crater, and the exotic island of Zanzibar. Witness the Great Migration, climb Mount Kilimanjaro, or unwind on pristine beaches surrounded by turquoise waters.",
-      image: balloonImage,
-    },
-    {
-      country: "Uganda – The Pearl of Africa",
-      description: "Uganda captivates travelers with its diverse landscapes from the source of the River Nile to the misty Bwindi Impenetrable Forest, home to mountain gorillas. It's a destination for adventurers and nature lovers alike.",
-      image: cheetahImage,
-    },
-    {
       country: "Rwanda – The Land of a Thousand Hills",
       description: "Rwanda is a gem of natural beauty and resilience. Explore the lush rainforests of Volcanoes National Park for a once-in-a-lifetime gorilla trekking experience, or enjoy the tranquility of Lake Kivu and the charm of Kigali city.",
       image: kigaliImage,
     },
   ];
+
+  const tanzaniaDestination = {
+    title: "Tanzania – Where Adventure Meets Serenity",
+    description: "Home to the majestic Serengeti, Tanzania is every traveler's dream, the breathtaking Ngorongoro Crater, and the exotic island of Zanzibar. Witness the Great Migration, climb Mount Kilimanjaro, or unwind on pristine beaches surrounded by turquoise waters.",
+    images: [balloonImage, tanzaniaImage],
+  };
+
+  const ugandaDestination = {
+    title: "Uganda – The Pearl of Africa",
+    description: "Uganda captivates travelers with its diverse landscapes from the source of the River Nile to the misty Bwindi Impenetrable Forest, home to mountain gorillas. It's a destination for adventurers and nature lovers alike.",
+    images: [cheetahImage, ugandaImage],
+  };
 
   return (
     <div className="min-h-screen">
@@ -74,6 +79,22 @@ const EastAfrica = () => {
                   </div>
                 </Card>
               ))}
+              
+              <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                <DestinationCarousel 
+                  title={tanzaniaDestination.title}
+                  description={tanzaniaDestination.description}
+                  images={tanzaniaDestination.images}
+                />
+              </div>
+              
+              <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                <DestinationCarousel 
+                  title={ugandaDestination.title}
+                  description={ugandaDestination.description}
+                  images={ugandaDestination.images}
+                />
+              </div>
             </div>
           </div>
         </section>

@@ -9,9 +9,11 @@ import singapore2Image from "@/assets/singapore-2.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
 import parisImage from "@/assets/paris.jpg";
 import turkeyImage from "@/assets/turkey.jpg";
+import italyImage from "@/assets/italy.jpg";
 import malaysia1Image from "@/assets/malaysia-1.jpg";
 import malaysia2Image from "@/assets/malaysia-2.jpg";
 import maldivesImage from "@/assets/maldives.jpg";
+import mauritiusImage from "@/assets/mauritius.jpg";
 import seychellesImage from "@/assets/seychelles.jpg";
 import PageHero from "@/components/PageHero";
 import europeAsiaHero from "@/assets/europe-asia.jpg";
@@ -37,7 +39,7 @@ const EuropeAsia = () => {
     {
       destination: "Italy – Where Culture Meets Cuisine",
       description: "From the timeless ruins of Rome and the dreamy waterways of Venice to the sun-kissed hills of Tuscany, Italy offers an unforgettable sensory journey. Delight in its rich flavors, marvel at iconic masterpieces, and experience the warmth of Italian charm.",
-      image: sunriseImage,
+      image: italyImage,
     },
   ];
 
@@ -80,7 +82,7 @@ const EuropeAsia = () => {
     {
       destination: "Mauritius – The Island of Harmony",
       description: "A melting pot of cultures surrounded by crystal-clear waters, Mauritius offers a perfect mix of relaxation and adventure. Enjoy sun-soaked beaches, lush sugarcane fields, and vibrant coral reefs. Explore Chamarel Waterfall, go snorkeling in Blue Bay, or unwind in a luxury beachfront resort.",
-      image: sunriseImage,
+      image: mauritiusImage,
     },
     {
       destination: "Seychelles – Nature's Masterpiece",

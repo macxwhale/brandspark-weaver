@@ -6,8 +6,11 @@ import cheetahImage from "@/assets/gallery-cheetah.jpg";
 import safariImage from "@/assets/gallery-safari.jpg";
 import sunriseImage from "@/assets/gallery-sunrise.jpg";
 import capetownImage from "@/assets/capetown.jpg";
+import victoriaFallsImage from "@/assets/victoria-falls.jpg";
+import okavangoDeltaImage from "@/assets/okavango-delta.jpg";
 import PageHero from "@/components/PageHero";
 import southAfricaHero from "@/assets/south-africa.jpg";
+import DestinationCarousel from "@/components/DestinationCarousel";
 
 const SouthernAfrica = () => {
   const southAfrica = [
@@ -28,18 +31,17 @@ const SouthernAfrica = () => {
     },
   ];
 
-  const otherDestinations = [
-    {
-      country: "Botswana – The Jewel of the Kalahari",
-      description: "Botswana is a land of untouched wilderness, spectacular wildlife, and breathtaking natural beauty. Explore the Okavango Delta, a UNESCO World Heritage Site, and Chobe National Park, home to one of the largest elephant populations in Africa.",
-      highlights: ["Okavango Delta - winding waterways and abundant wildlife", "Chobe National Park - elephants, hippos, and crocodiles"],
-    },
-    {
-      country: "Zimbabwe – The Land of Wonders",
-      description: "Zimbabwe is home to Victoria Falls, one of the Seven Natural Wonders of the World. Explore wildlife-rich Hwange National Park, discover ancient history at the Great Zimbabwe Ruins, and cruise along the Zambezi River at sunset.",
-      highlights: ["Victoria Falls - The Smoke That Thunders", "Hwange National Park", "Great Zimbabwe Ruins"],
-    },
-  ];
+  const botswanaDestination = {
+    title: "Botswana – The Jewel of the Kalahari",
+    description: "Botswana is a land of untouched wilderness, spectacular wildlife, and breathtaking natural beauty. Explore the Okavango Delta, a UNESCO World Heritage Site, and Chobe National Park, home to one of the largest elephant populations in Africa.",
+    images: [sunriseImage, okavangoDeltaImage],
+  };
+
+  const zimbabweDestination = {
+    title: "Zimbabwe – The Land of Wonders",
+    description: "Zimbabwe is home to Victoria Falls, one of the Seven Natural Wonders of the World. Explore wildlife-rich Hwange National Park, discover ancient history at the Great Zimbabwe Ruins, and cruise along the Zambezi River at sunset.",
+    images: [cheetahImage, victoriaFallsImage],
+  };
 
   return (
     <div className="min-h-screen">
@@ -89,29 +91,21 @@ const SouthernAfrica = () => {
 
             {/* Other Destinations */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {otherDestinations.map((destination, index) => (
-                <Card 
-                  key={destination.country}
-                  className="p-8 hover-lift animate-fade-in"
-                  style={{ animationDelay: `${(index + 3) * 0.1}s` }}
-                >
-                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                    <MapPin className="w-6 h-6 text-primary" />
-                    {destination.country}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    {destination.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {destination.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-primary mt-1">•</span>
-                        <span className="text-sm">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              ))}
+              <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                <DestinationCarousel 
+                  title={botswanaDestination.title}
+                  description={botswanaDestination.description}
+                  images={botswanaDestination.images}
+                />
+              </div>
+              
+              <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                <DestinationCarousel 
+                  title={zimbabweDestination.title}
+                  description={zimbabweDestination.description}
+                  images={zimbabweDestination.images}
+                />
+              </div>
             </div>
           </div>
         </section>
